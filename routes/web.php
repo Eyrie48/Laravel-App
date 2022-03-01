@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/todos', function () {
-    return view('welcome');
+    return view('todos');
 });
 
 Route::get('/calendar', function () {
-    return view('welcome');
+    return view('calendar');
 });
 
 Route::get('/board', function () {
-    return view('welcome');
+    return view('board');
 });
