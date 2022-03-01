@@ -36,3 +36,7 @@ $( document ).ready(function() {
 })
 </script>
 @stop
+
+@foreach($events AS $event)
+  <a href='#' class="btn btn-primary"> {{$event->title}, {$event->start}, {$event->end}} </a>
+@endforeach
