@@ -13,7 +13,10 @@
     <div class="card card-primary">
       <div class="card-body p-0">
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
-        </div>
+        @foreach($events AS $event)
+  <a href='#' class="btn btn-primary"> {{$event->title, start, end}} </a>
+@endforeach
+      </div>
       </div>
     </div>
   </div>
@@ -37,6 +40,3 @@ $( document ).ready(function() {
 </script>
 @stop
 
-@foreach($events AS $event)
-  <a href='#' class="btn btn-primary"> {{$event->title, start, end}} </a>
-@endforeach
