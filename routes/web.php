@@ -30,5 +30,5 @@ Route::get('/board', function () {
 });
 
 Route::fallback(function(){
-    return view('error-404');
+    return view('fallback');
 });

@@ -256,8 +256,6 @@ return [
             'url'  => 'board',
             'icon' => 'fas fa-fw fa-hdd',
         ],
-
-
     ],
 
     /*
