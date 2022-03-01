@@ -1,20 +1,13 @@
 
-@extends('adminlte::page')
-
-@section('title', 'fallback')
-
-@section('content_header')
+<div>
     <h1>Error</h1>
-@stop
 
-@section('content')
-    <p>Error 404 could not figure out what you were doing.</p>
-@stop
+<p>Error 404 could not figure out what you were doing.</p>
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
-@section('js')
-    <script> console.log('error 404'); </script>
-@stop
+<link rel="stylesheet" href="/css/admin_custom.css">
+
+
+</div>
+
+<script> console.log('error 404'); </script>
