@@ -26,7 +26,7 @@ Route::get('/todos', function () {
 });
 
 Route::get('/calendar', function () {
-    $jsonString = file_get_contents(('my_data.json'));
+    $jsonString = file_get_contents(base_path('my_data.json'));
 
     $data = json_decode($jsonString, true);
     return view('calendar');
