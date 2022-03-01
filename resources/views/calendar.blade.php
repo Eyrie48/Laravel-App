@@ -37,6 +37,6 @@ $( document ).ready(function() {
 </script>
 @stop
 
-@foreach($events AS $event)
-  <a href='#' class="btn btn-primary"> {{$event->title, start, end}} </a>
+@foreach($json_data['events'] AS $event)
+  <a href='#' class="btn btn-primary"> {{$event->title, $events->start, $events->end}} </a>
 @endforeach
