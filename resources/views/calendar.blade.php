@@ -18,6 +18,10 @@
     </div>
   </div>
 </div>
+
+@foreach($json_data['events'] AS $events)
+  <a href='#' class="btn btn-primary"> {{$events->title, $events->start, $events->end}} </a>
+@endforeach
 @stop
 
 @section('css')
