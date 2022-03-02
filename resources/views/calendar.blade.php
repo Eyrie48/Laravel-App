@@ -10,10 +10,15 @@
 @section('content')
 <div class="row">
   <div class="col-md-12">
+    <input> 
+      $jsonString = file_get_contents(base_path(my_data.json));
+      $data = json_encode($jsonString);
+      echo $data;
+    </input>
     <div class="card card-primary">
       <div class="card-body p-0">
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,11 +39,8 @@ $( document ).ready(function() {
       initialView: 'dayGridMonth',
       events: '/events-feed'
     });
-    $jsonString = file_get_contents(base_path('my_data.json'));
-    $data = json_encode($jsonString);
-    echo $data;
-
     calendar.render();
 })
 </script>
+
 @stop
