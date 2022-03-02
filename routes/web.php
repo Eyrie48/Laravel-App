@@ -26,10 +26,17 @@ Route::get('/todos', function () {
 });
 
 Route::get('/calendar', function () {
-    //$tools = file_get_contents(base_path('my_data.json'));
+    /*
     $jsonString = file_get_contents(base_path('my_data.json'));
 
     $data = json_encode($jsonString);
+    echo $data;
+    */
+
+
+
+    
+    //$tools = file_get_contents(base_path('my_data.json'));
     /*$data = json_decode($tools, true);
     echo $data[0];  //  paintbrush
     echo $data[1];  //  canvas
@@ -38,7 +45,7 @@ Route::get('/calendar', function () {
     //$data['title']['start']['end'];
     //$data->events;
     //echo $data['events'];
-    echo $data;
+    
   
 
     return view('calendar');
