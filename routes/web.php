@@ -30,7 +30,7 @@ Route::get('/calendar', function () {
 
     //$data = json_decode($jsonString, true);
     $data = json_decode($tools, true);
-    echo $data[0];  //  paintbrush
+    //echo $data[0];  //  paintbrush
     echo $data[1];  //  canvas
     echo $data[2];
     //$data['title']['start']['end'];
