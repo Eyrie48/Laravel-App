@@ -26,10 +26,10 @@ Route::get('/todos', function () {
 });
 
 Route::get('/calendar', function () {
-    //$jsonString = file_get_contents(base_path('my_data.json'));
+    $tools = file_get_contents(base_path('my_data.json'));
 
     //$data = json_decode($jsonString, true);
-    $data = json_decode('my_data', true);
+    $data = json_decode($tools, true);
     echo $data[0];  //  paintbrush
     echo $data[1];  //  canvas
     echo $data[2];
