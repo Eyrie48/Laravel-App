@@ -29,7 +29,8 @@ Route::get('/calendar', function () {
     $jsonString = file_get_contents(base_path('my_data.json'));
 
     $data = json_decode($jsonString, true);
-    dd(__('data'));
+    $data['title']['start']['end'];
+
     return view('calendar');
 });
 
