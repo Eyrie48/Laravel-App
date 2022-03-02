@@ -26,15 +26,17 @@ Route::get('/todos', function () {
 });
 
 Route::get('/calendar', function () {
-    $tools = file_get_contents(base_path('my_data.json'));
+    //$tools = file_get_contents(base_path('my_data.json'));
+    $jsonString = file_get_contents(base_path('my_data.json'));
 
-    //$data = json_decode($jsonString, true);
-    $data = json_decode($tools, true);
-    //echo $data[0];  //  paintbrush
+    $data = json_decode($jsonString, true);
+    /*$data = json_decode($tools, true);
+    echo $data[0];  //  paintbrush
     echo $data[1];  //  canvas
     echo $data[2];
+    */
     //$data['title']['start']['end'];
-    //$data->events->title;
+    $data->events;
    // echo $data['events'];
 
   
