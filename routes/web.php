@@ -36,8 +36,8 @@ Route::get('/calendar', function () {
     echo $data[2];
     */
     //$data['title']['start']['end'];
-    $data->events;
-   // echo $data['events'];
+    //$data->events;
+    echo $data['events'];
 
   
 
