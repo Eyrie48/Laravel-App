@@ -30,7 +30,7 @@ Route::get('/calendar', function () {
 
     $data = json_decode($jsonString, true);
     //$data['title']['start']['end'];
-    $data->info->title;
+    $data->events->title;
     return view('calendar');
 });
 
