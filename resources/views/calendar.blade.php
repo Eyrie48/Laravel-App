@@ -35,7 +35,13 @@ $( document ).ready(function() {
       initialView: 'dayGridMonth',
       events: '/events-feed'
     });
-    calendar.render();
+    
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+    $data = json_encode($jsonString);
+    echo $data;
+    
+    calendar.render(data);
 })
 </script>
 
