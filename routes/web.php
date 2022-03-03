@@ -57,9 +57,8 @@ Route::get('/board', function () {
 
 Route::get('/events-feed', function () {
     $jsonString = file_get_contents(base_path('my_data.json'));
-
     $data = json_encode($jsonString);
-    echo $data;
+    //echo $data;
     return $data;
 });
 /*
