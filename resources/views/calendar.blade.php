@@ -13,7 +13,9 @@
     <div class="card card-primary">
       <div class="card-body p-0">
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
-          @foreach($events As $event)
+          <script> $jsonString = file_get_contents(base_path('my_data.json')) </script>
+
+          @foreach($jsonString As $event)
            <a href='#'> {{$event->title}} </a>
           @endforeach
         </div>
