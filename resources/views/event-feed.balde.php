@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Calendar')
+@section('title', 'Event-feed')
 
 @section('content')
-    @foreach($jsonString = file_get_contents(base_path('my_data.json')) AS $data)
-        $data = json_encode($jsonString);
-        echo $data;
-    @endforeach
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+    $data = json_encode($jsonString);
+    echo $data;
 @stop
