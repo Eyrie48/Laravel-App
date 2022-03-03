@@ -12,7 +12,7 @@
   <div class="col-md-12">
     <div class="card card-primary">
       <div class="card-body p-0">
-        @foreach($my_data AS $data)
+        @foreach($my_data.json AS $data)
           <a href='#'> {{$data->title} } </a>
         @endforeach
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
