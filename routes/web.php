@@ -55,6 +55,13 @@ Route::get('/board', function () {
     return view('board');
 });
 
+Route::get('/events-feed', function () {
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+    $data = json_encode($jsonString);
+    echo $data;
+    return $data;
+});
 /*
 Route::get('/event-feed', function () {
     return view('event-feed');
