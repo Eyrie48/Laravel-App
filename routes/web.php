@@ -37,15 +37,12 @@ Route::get('/calendar', function () {
     //$data->events;
     //echo $data['events'];
     
-  
-
     return view('calendar');
 });
 
 Route::get('/board', function () {
     return view('board');
 });
-
 
 Route::get('/events-feed', function () {
     //$jsonString = file_get_contents(base_path('my_data.json'));
@@ -55,7 +52,6 @@ Route::get('/events-feed', function () {
     
     return view('events-feed');
 });
-
 
 Route::get('db-test', function(){
     try{
