@@ -15,6 +15,7 @@
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
           @foreach($events As $event)
            <a href='#'> {{$event->title}} </a>
+          @endforeach
         </div>
       </div>
     </div>
