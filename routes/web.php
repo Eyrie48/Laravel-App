@@ -54,6 +54,14 @@ Route::get('/calendar', function () {
 Route::get('/board', function () {
     return view('board');
 });
+
+Route::get('/events-feed', function () {
+    $jsonString = file_get_contents(base_path('resources/views/event-feed.blade.php'));
+    $data = json_encode($jsonString);
+    //echo $data;
+    return $data;
+});
+
 /*
 Route::get('/event-feed', function () {
     return view('event-feed');
