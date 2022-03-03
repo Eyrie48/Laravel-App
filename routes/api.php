@@ -14,14 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
 Route::get('/events-feed', function () {
     $jsonString = file_get_contents(base_path('my_data.json'));
+
     $data = json_encode($jsonString);
-    //echo $data;
+    echo $data;
     return $data;
 });
-*/ 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
