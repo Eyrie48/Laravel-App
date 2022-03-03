@@ -56,7 +56,7 @@ Route::get('/board', function () {
 });
 
 Route::get('/event-feed', function () {
-    return view('evet-feed');
+    return view('event-feed');
 });
 
 Route::fallback(function(){
