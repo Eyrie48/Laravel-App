@@ -61,6 +61,16 @@ Route::get('/event-feed', function () {
 });
 */
 
+Route::get('db-test', function(){
+    try{
+        \DB::connection()->getPDO();
+        $db_name = \DB::connection()->getDatabaseName();
+        echo 'Database Connected: '.$db_name;
+    } catch(\Exception $e) {
+        echo 'None';
+    }
+});
+
 Route::fallback(function(){
     return view('fallback');
 });
