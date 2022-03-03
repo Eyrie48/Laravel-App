@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/events-feed', function () {
+    $jsonString = file_get_contents(base_path('resources/views/event-feed.blade.php'));
+    $data = json_encode($jsonString);
+    //echo $data;
+    return $data;
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
