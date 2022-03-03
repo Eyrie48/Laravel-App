@@ -27,11 +27,6 @@ Route::get('/todos', function () {
 
 Route::get('/calendar', function () {
     
-    
-
-
-
-    
     //$tools = file_get_contents(base_path('my_data.json'));
     /*$data = json_decode($tools, true);
     echo $data[0];  //  paintbrush
