@@ -34,12 +34,12 @@ $( document ).ready(function() {
     var calendar = new FullCalendar.Calendar($('#calendar')[0], {
       initialView: 'dayGridMonth',
       events: '/events-feed',
-      $jsonString = file_get_contents(base_path('my_data.json')),
-
-      $data = json_encode($jsonString),
-      echo $data
+      
     });
-    
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+      $data = json_encode($jsonString);
+      echo $data;
     
     
     calendar.render(data);
