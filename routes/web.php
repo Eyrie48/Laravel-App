@@ -56,9 +56,9 @@ Route::get('/events-feed', function () {
     $jsonString = file_get_contents(base_path('my_data.json'));
     
     $data = json_encode($jsonString, true);
-    echo $data;
+    //echo $data;
     
-    return $data->toJson(JSON_UNESCAPED_SLASHES);
+    return $data;
 });
 
 
