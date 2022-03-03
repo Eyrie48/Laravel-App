@@ -36,7 +36,7 @@ $( document ).ready(function() {
       events: '/events-feed',
     });
     
-    calendar.render(data);
+    calendar.render();
 })
 </script>
 
