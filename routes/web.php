@@ -71,6 +71,11 @@ Route::get('db-test', function(){
     }
 });
 
+Route::get('/db-migrate', functino(){
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
+
 Route::fallback(function(){
     return view('fallback');
 });
