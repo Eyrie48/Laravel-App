@@ -27,10 +27,6 @@ Route::get('/todos', function () {
 
 Route::get('/calendar', function () {
     
-    $jsonString = file_get_contents(base_path('my_data.json'));
-
-    $data = json_encode($jsonString);
-    echo $data;
     
 
 
@@ -55,11 +51,15 @@ Route::get('/board', function () {
     return view('board');
 });
 
-/*
+
 Route::get('/event-feed', function () {
-    return view('event-feed');
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+    $data = json_encode($jsonString);
+    //echo $data;
+    return echo $data;
 });
-*/
+
 
 Route::get('db-test', function(){
     try{
