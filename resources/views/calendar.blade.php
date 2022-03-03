@@ -1,6 +1,6 @@
 
 @extends('adminlte::page')
-
+@extends('my_data.json')
 @section('title', 'Calendar')
 
 @section('content_header')
@@ -13,10 +13,10 @@
     <div class="card card-primary">
       <div class="card-body p-0">
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
-          <script> $jsonString = file_get_contents(base_path('my_data.json')) </script>
+          
 
-          @foreach($jsonString As $event)
-           <a href='#'> {{$jsonString->title}} </a>
+          @foreach($my_data)
+           <a href='#'> {{$my_data->title}} </a>
           @endforeach
         </div>
       </div>
