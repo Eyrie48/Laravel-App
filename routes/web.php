@@ -26,12 +26,12 @@ Route::get('/todos', function () {
 });
 
 Route::get('/calendar', function () {
-    
+    /*
     $jsonString = file_get_contents(base_path('my_data.json'));
 
     $data = json_encode($jsonString);
     echo $data;
-    
+    */
 
 
 
@@ -57,4 +57,12 @@ Route::get('/board', function () {
 
 Route::fallback(function(){
     return view('fallback');
+});
+
+Route::get('/events-feed', function () {
+    $jsonString = file_get_contents(base_path('my_data.json'));
+
+    $data = json_encode($jsonString);
+    echo $data;
+    return view('calendar');
 });
