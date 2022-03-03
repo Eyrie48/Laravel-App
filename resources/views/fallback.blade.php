@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'To Do List')
+@section('title', 'Fallback')
 
 @section('content_header')
     <h1>Error</h1>
