@@ -13,6 +13,8 @@
     <div class="card card-primary">
       <div class="card-body p-0">
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
+          @foreach($events As $event)
+           <a href='#'> {{$event ->title}} </a>
         </div>
       </div>
     </div>
