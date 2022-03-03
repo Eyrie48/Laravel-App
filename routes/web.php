@@ -58,7 +58,7 @@ Route::get('/events-feed', function () {
     $data = json_encode($jsonString, true);
     //echo $data;
     
-    return $data;
+    return '/events-feed';
 });
 
 
