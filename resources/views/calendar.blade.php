@@ -36,11 +36,6 @@ $( document ).ready(function() {
       events: '/events-feed',
       
     });
-    $jsonString = file_get_contents(base_path('my_data.json'));
-
-      $data = json_encode($jsonString);
-      echo $data;
-    
     
     calendar.render(data);
 })
