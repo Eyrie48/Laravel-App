@@ -12,9 +12,7 @@
   <div class="col-md-12">
     <div class="card card-primary">
       <div class="card-body p-0">
-        @foreach($jsonString = file_get_contents(base_path('my_data.json')) AS $data)
-          <a href='#'> {{$data->title} } </a>
-        @endforeach
+      
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
         </div>
       </div>
@@ -42,3 +40,4 @@ $( document ).ready(function() {
 </script>
 
 @stop
+

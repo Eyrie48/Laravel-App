@@ -55,6 +55,10 @@ Route::get('/board', function () {
     return view('board');
 });
 
+Route::get('/event-feed', function () {
+    return view('evet-feed');
+});
+
 Route::fallback(function(){
     return view('fallback');
 });
