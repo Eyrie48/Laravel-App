@@ -16,7 +16,7 @@
           <script> $jsonString = file_get_contents(base_path('my_data.json')) </script>
 
           @foreach($jsonString As $event)
-           <a href='#'> {{$event->title}} </a>
+           <a href='#'> {{$jsonString->title}} </a>
           @endforeach
         </div>
       </div>
