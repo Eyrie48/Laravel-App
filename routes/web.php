@@ -23,8 +23,9 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::resource('/todos', TodoController::class);
 Route::get('/todos', function () {
-    Route::resource('/todos', TodoController::class);
+    
 
     return view('todos');
 });
