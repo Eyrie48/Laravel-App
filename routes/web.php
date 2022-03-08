@@ -14,7 +14,7 @@ use App\Http\Controllers\TodoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('/todos', TodoController::class);
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,6 +26,7 @@ Route::get('/home', function () {
 
 
 Route::get('/todos', function () {
+    Route::resource('/todos', TodoController::class);
     return view('todos');
 });
 
