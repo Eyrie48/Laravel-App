@@ -44,13 +44,22 @@ Route::get('/board', function () {
     return view('board');
 });
 
-Route::get('/events-feed', function () {
-    //$jsonString = file_get_contents(base_path('my_data.json'));
+Route::get('/events-feed', function () {    
+    $data = array(
+        array(
+            'title' => "CSE4500 Class",
+            'start' => "2022-02-23T17:30:00",
+            'end' => "2022-02-23T18:45:00"
+        ),
+        array(
+            'title' => "CSE4500 Class",
+            'start' => "2022-02-28T17:30:00",
+            'end' => "2022-02-28T18:45:00"
+
+        )
+    );
     
-    //$data = json_encode($jsonString, true);
-    //echo $data;
-    
-    return view('events-feed');
+    return json_encode($data);
 });
 
 Route::get('db-test', function(){
