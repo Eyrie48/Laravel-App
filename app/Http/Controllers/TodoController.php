@@ -43,6 +43,11 @@ class TodoController extends Controller
             'title' => 'required', 
             'progress' => 'required', 
         ]);
+        
+        $todo = Todo::create([ 
+            'title' => $request->title, 
+            'progress' => $request->progress, 
+       ]);
 
         return $this->index();
     }
