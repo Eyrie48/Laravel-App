@@ -26,7 +26,7 @@ Route::get('/home', function () {
 
 
 Route::get('/todos', function () {
-    Route::resource('/todos', TodoController::class);
+    //Route::resource('/todos', TodoController::class);
     return view('todos');
 });
 
