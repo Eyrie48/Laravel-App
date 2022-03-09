@@ -14,7 +14,7 @@ use App\Http\Controllers\TodoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('/todos', TodoController::class);
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,7 +88,7 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
-Route::resource('/create', TodoController::class);
+
 
 Route::fallback(function(){
     return view('fallback');
