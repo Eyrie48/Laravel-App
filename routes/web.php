@@ -88,7 +88,7 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
-Route::resource('/todos', TodoController::class);
+Route::resource('/todos.create', TodoController::class);
 
 Route::fallback(function(){
     return view('fallback');
