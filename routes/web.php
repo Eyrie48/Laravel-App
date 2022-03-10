@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 
@@ -89,6 +90,7 @@ Route::get('/db-migrate', function() {
 });
 
 Route::resource('/todos', TodoController::class);
+Route::resource('/calendar', CalendarController::class);
 
 Route::fallback(function(){
     return view('fallback');
