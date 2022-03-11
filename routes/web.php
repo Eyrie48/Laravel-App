@@ -51,6 +51,8 @@ Route::get('/board', function () {
 });
 
 Route::get('/events-feed', function () {    
+    $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+    
     $data = array(
         array(
             'title' => "CSE4500 Class",
@@ -65,7 +67,7 @@ Route::get('/events-feed', function () {
         )
     );
 
-    $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+    
     
     return json_encode($data, $events);
 });
