@@ -39,7 +39,7 @@ class CalendarController extends Controller
     public function store(Request $request)
     {
         //
-        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        //$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         $validated = $request->validate([
             'title' => 'required', 
             'start_at' => 'required', 
