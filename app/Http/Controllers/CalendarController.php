@@ -14,7 +14,7 @@ class CalendarController extends Controller
     public function index()
     {
         //
-        return view('calendars', compact('calendar'));
+        return view('calendars', compact('calendars'));
     }
 
     /**
