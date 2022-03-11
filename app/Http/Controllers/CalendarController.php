@@ -67,7 +67,7 @@ class CalendarController extends Controller
         //
         
         //$calendar = Calendar::find($id);
-        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        $calendar = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
         return view('calendar.show_cal', compact('events'));
     }
 
