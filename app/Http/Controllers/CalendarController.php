@@ -25,6 +25,7 @@ class CalendarController extends Controller
     public function create()
     {
         //$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return view('create_cal');
     }
 
     /**
@@ -44,11 +45,11 @@ class CalendarController extends Controller
 
         $todo = Calendar::create([ 
             'title' => $request->title, 
-            'start_at' => $request->progress,
-            'end_at' => $request->title, 
+            'start_at' => $request->date('start_at'),
+            'end_at' => $request->date('end_at'), 
        ]);
 
-        return $this->index();
+        return view('calendar');
     }
 
     /**
