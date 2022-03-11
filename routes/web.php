@@ -51,7 +51,6 @@ Route::get('/board', function () {
 });
 
 Route::get('/events-feed', function () {    
-    $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
     
     $data = array(
         array(
@@ -69,7 +68,7 @@ Route::get('/events-feed', function () {
 
     
     
-    return json_encode($data, $events);
+    return json_encode($data);
 });
 
 Route::get('/db-test', function(){
