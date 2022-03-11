@@ -14,10 +14,10 @@ class CalendarController extends Controller
     public function index()
     {
         //
-        $calendar = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+        $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
         //return view('calendar');
         
-        return view('calendar', compact('calendar'));
+        return view('calendar', compact('calendars'));
         
     }
 
