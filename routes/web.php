@@ -42,7 +42,7 @@ Route::get('/calendar', function () {
     //$data['title']['start']['end'];
     //$data->events;
     //echo $data['events'];
-    
+    $events = Event::select('title', 'start_at AS start_', 'end_at AS end_')->get();
     return view('calendar');
 });
 
