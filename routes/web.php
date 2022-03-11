@@ -43,7 +43,9 @@ Route::get('/calendar', function () {
     //$data->events;
     //echo $data['events'];
     
-    return view('calendar');
+    $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+    
+    return view('calendar', compact('calendars'));
 });
 
 Route::get('/board', function () {
@@ -66,7 +68,7 @@ Route::get('/events-feed', function () {
         )
     );
 
-    $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+    //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
     
     return json_encode($data);
 });
