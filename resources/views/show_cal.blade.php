@@ -8,6 +8,6 @@
 @stop
 
 @section('content')
-  <h2>{{ $calendars->title; }}</h2>
-  <div><p>{{ $calendars->start_at; }}</p></div>
+  <h2>{{ $calendar->title; }}</h2>
+  <div><p>{{ $calendar->start_at; }}</p></div>
 @stop
