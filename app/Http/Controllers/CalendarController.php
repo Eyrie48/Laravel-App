@@ -52,6 +52,8 @@ class CalendarController extends Controller
             'end_at' => $request->date('end_at'), 
        ]);
 
+       $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+
         return view('calendar');
     }
 
