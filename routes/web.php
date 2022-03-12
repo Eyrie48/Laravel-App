@@ -46,6 +46,7 @@ Route::get('/calendar', function () {
     //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
     
     return view('calendar');
+});
 
 Route::get('/board', function () {
     return view('board');
@@ -99,4 +100,3 @@ Route::resource('/calendar', CalendarController::class);
 Route::fallback(function(){
     return view('fallback');
 });
-
