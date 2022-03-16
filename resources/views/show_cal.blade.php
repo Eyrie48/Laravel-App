@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Calendar')
+@section('title', 'Calendars')
 
 @section('content_header')
     <h1>Calendar</h1>

@@ -16,9 +16,8 @@ class CalendarController extends Controller
         //
         //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
         //return view('calendar');
-        
-        return view('calendar');
-        
+        $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return view('calendar', json_encode(compact('calendars')['calendars']));
     }
 
     /**
@@ -50,8 +49,8 @@ class CalendarController extends Controller
 
         $todo = Calendar::create([ 
             'title' => $request->title, 
-            'start_at' => $request->date('start_at'),
-            'end_at' => $request->date('end_at'), 
+            'start_at' => $request->datetime('start_at'),
+            'end_at' => $request->datetime('end_at'), 
        ]);
 
        
