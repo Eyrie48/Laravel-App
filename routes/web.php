@@ -68,9 +68,11 @@ Route::get('/events-feed', function () {
         )
     );
 
-    $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+    //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
     
-    return json_encode($calendars, compact('calendars')['calendars']);
+    //return json_encode($calendars, compact('calendars')['calendars']);
+
+    return json_encode($data);
 });
 
 Route::get('/db-test', function(){
