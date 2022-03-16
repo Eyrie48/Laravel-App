@@ -65,14 +65,15 @@ Route::get('/events-feed', function () {
             'start' => "2022-02-28T17:30:00",
             'end' => "2022-02-28T18:45:00"
 
-        )
+        ),
+        //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get()
     );
 
-    //$calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
+    $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
     
-    //return json_encode($calendars, compact('calendars')['calendars']);
+    return json_encode(compact('calendars')['calendars']);
 
-    return json_encode($data);
+    //return json_encode($data);
 });
 
 Route::get('/db-test', function(){
