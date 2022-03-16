@@ -71,7 +71,7 @@ Route::get('/events-feed', function () {
 
     $calendars = Calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
     
-    return json_encode(compact('calendars')['calendars']);
+    return json_encode($data, compact('calendars')['calendars']);
 
     //return json_encode($data);
 });
