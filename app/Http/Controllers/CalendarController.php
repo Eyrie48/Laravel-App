@@ -50,8 +50,8 @@ class CalendarController extends Controller
 
         $todo = Calendar::create([ 
             'title' => $request->title, 
-            'start_at' => $request->DateTime('start_at'),
-            'end_at' => $request->DateTime('end_at'), 
+            'start_at' => $request->date('start_at'),
+            'end_at' => $request->date('end_at'), 
        ]);
 
        
